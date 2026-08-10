@@ -1,0 +1,6 @@
+{
+    "dial": {
+        "base_url": "https://ai-proxy.lab.epam.com",
+        "api_key_env": "DIAL_API_KEY"
+    }
+}

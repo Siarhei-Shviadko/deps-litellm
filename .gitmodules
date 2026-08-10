@@ -1,0 +1,3 @@
+[submodule "vendors/deps-pipelines"]
+	path = vendors/deps-pipelines
+	url = git@github.com:Siarhei-Shviadko/deps-pipelines.git
