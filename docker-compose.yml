@@ -1,8 +1,6 @@
-version: "3.4"
-
 services:
   litellm:
-    image: "${REPOSITORY_URL}/base/litellm-database:main-stable"
+    image: "${REPOSITORY_URL:+$REPOSITORY_URL/base/}litellm/litellm-database:1.93.2"
     container_name: deps-litellm
     command:
       - "--config=/app/config/config.yaml"
@@ -11,7 +9,7 @@ services:
     volumes:
       - ./etc/litellm/config.yaml:/app/config/config.yaml
     env_file:
-      - ./etc/litellm/.env
+      - ./etc/litellm/.dev.env
       - ./.env
     networks:
       - deps-network
